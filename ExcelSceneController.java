@@ -10,13 +10,13 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 
-public class MainSceneController {
+public class ExcelSceneController {
 
     // Vamos fazer uma função CreateScene que irá
     // criar a cena apartir de um FXMLLoader carregando
     // o .fxml.
     public static Scene CreateScene() throws Exception {
-        URL sceneUrl = LoginSceneController.class.getResource("Main-scene.fxml");
+        URL sceneUrl = LoginSceneController.class.getResource("Excel-scene.fxml");
         Parent root = FXMLLoader.load(sceneUrl);
         Scene scene = new Scene(root);
         return scene;
@@ -26,20 +26,20 @@ public class MainSceneController {
     // Note que id/field devem ser iguais ao nome
     // que aparece aqui.
     @FXML
-    protected Button btNext;
+    protected Button btPrev;
 
     // Evento submit executado ao rodar a aplicação.
     @FXML
-    protected void tryNext(ActionEvent e) throws Exception {
-        // Fechando a main
-        Stage crrStage = (Stage) btNext
+    protected void tryPrev(ActionEvent e) throws Exception {
+        // Fechando o excel
+        Stage crrStage = (Stage) btPrev
                 .getScene().getWindow();
         crrStage.close();
 
         try {
-            // Abrindo a tela excel
+            // Abrindo a tela main
             Stage stage = new Stage();
-            Scene scene = ExcelSceneController.CreateScene();
+            Scene scene = MainSceneController.CreateScene();
             stage.setScene(scene);
             stage.show();
         } catch (Exception ex) {

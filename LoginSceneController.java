@@ -64,25 +64,22 @@ public class LoginSceneController {
 
         // Fechando o login
         Stage crrStage = (Stage) btLogin
-        .getScene().getWindow();
+                .getScene().getWindow();
         crrStage.close();
-        
-        try
-        {
+
+        try {
             // Abrindo a tela principal
             Stage stage = new Stage();
             Scene scene = MainSceneController.CreateScene();
             stage.setScene(scene);
             stage.show();
-        }catch(
-        Exception ex)
-        {
+        } catch (Exception ex) {
             Alert alert = new Alert(
-                AlertType.ERROR,
-                "Erro ao processar a tela. Consulte o apoio de TI",
-                ButtonType.OK);
-                alert.showAndWait();
-                ex.printStackTrace();
+                    AlertType.ERROR,
+                    "Erro ao processar a tela. Consulte o apoio de TI",
+                    ButtonType.OK);
+            alert.showAndWait();
+            ex.printStackTrace();
         }
     }
 }
