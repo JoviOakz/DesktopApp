@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.web.HTMLEditor?>
+
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MainSceneController">
+   <children>
+      <Pane prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label layoutX="14.0" layoutY="27.0" text="Bosch" textFill="RED">
+               <font>
+                  <Font name="Bosch Sans Bold" size="39.0" />
+               </font>
+            </Label>
+            <Label layoutX="26.0" layoutY="83.0" text="Bem-vindo, Don">
+               <font>
+                  <Font name="Bosch Sans Regular" size="12.0" />
+               </font>
+            </Label>
+            <MenuBar layoutY="2.0" prefHeight="25.0" prefWidth="600.0" />
+            <ColorPicker layoutX="175.0" layoutY="40.0" prefHeight="25.0" prefWidth="398.0" />
+            <TableView layoutX="421.0" layoutY="65.0" prefHeight="132.0" prefWidth="152.0">
+              <columns>
+                <TableColumn prefWidth="75.0" text="C1" />
+                <TableColumn prefWidth="75.0" text="C2" />
+              </columns>
+            </TableView>
+            <Slider layoutX="175.0" layoutY="76.0" prefHeight="14.0" prefWidth="232.0" />
+            <Spinner layoutX="175.0" layoutY="100.0" prefHeight="25.0" prefWidth="232.0" />
+            <RadioButton layoutX="29.0" layoutY="104.0" mnemonicParsing="false" text="RadioButton" />
+            <ProgressIndicator layoutX="46.0" layoutY="131.0" progress="0.0" />
+            <ToggleButton layoutX="247.0" layoutY="151.0" mnemonicParsing="false" text="ToggleButton" />
+         </children>
+      </Pane>
+      <HTMLEditor htmlText="&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body contenteditable=&quot;true&quot;&gt;&lt;/body&gt;&lt;/html&gt;" prefHeight="202.0" prefWidth="600.0" />
+   </children>
+</VBox>
